@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -22,6 +24,8 @@ body {
 	font-weight: 400;
 	color: #999;
 }
+
+/* Header Section */
 
 header {
 	padding: 1.5rem 1rem;
@@ -95,8 +99,14 @@ header {
 	transform-origin: center;
 }
 
-.hero-wrap .container{
-    animation: fadeInUp 1.5s both;
+/* Hero Section */
+
+.hero-wrap {
+	height: calc(100vh - 94.8px);
+}
+
+.hero-wrap .container {
+	animation: fadeInUp 1.5s both;
 }
 
 .hero-wrap .overlay {
@@ -124,7 +134,7 @@ header {
 	color: #000;
 }
 
-.text-center span {
+.text-center .subheading {
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 800;
@@ -144,7 +154,18 @@ header {
 	font-weight: 800;
 	margin-bottom: 0.5rem;
 	line-height: 2;
+	color: #000;
+}
+
+.txt-rotate {
+	font-family: "Poppins", sans-serif;
+	font-weight: 800;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+	line-height: 2;
 	color: #3e64ff;
+	text-decoration: underline;
+	text-transform: uppercase;
 }
 
 .arrow {
@@ -182,6 +203,110 @@ header {
 	font-size: 30px;
 }
 
+/* About Me Section */
+
+.about-me .container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.profile-img {
+	flex-basis: 50%;
+	flex-grow: 0;
+}
+
+.profile-img img {
+	width: 100%;
+	height: auto;
+	transform: scale(0.75);
+	border: 5px solid #000;
+	box-shadow: 30px 30px rgba(0, 0, 0, 0.15);
+	transition: all 0.4s ease;
+}
+
+.profile-img img:hover {
+	border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.about-content {
+	flex-basis: 50%;
+	flex-grow: 0;
+	padding-top: 4rem;
+	padding-right: 20px;
+	font-family: "Poppins", sans-serif;
+}
+
+.about-content .title {
+	font-size: 4rem;
+	color: #000;
+	font-weight: 800;
+}
+.about-content p {
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.8;
+	margin-bottom: 5rem;
+}
+
+.about-info {
+	display: inline-block;
+	width: 100%;
+}
+
+.about-info .info-field {
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	font-weight: 800;
+	display: flex;
+}
+
+.about-info .info-field span:first-child {
+	font-weight: 600;
+	color: #000;
+	width: 400px;
+}
+
+.about-info .info-field span {
+	width: calc(100% - 200px);
+	font-weight: 400;
+}
+
+.project-info {
+	color: #000;
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+.project-info span {
+	color: #3e64ff;
+	font-weight: 600;
+}
+
+.cv-btn {
+	outline: none;
+	border: none;
+	background: #3e64ff;
+	color: #fff;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	border-radius: 1.8rem;
+	margin-top: 2rem;
+	box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.cv-btn:hover {
+	cursor: pointer;
+	color: #000;
+	background: #4e6ef0;
+}
+
+/* Animations */
+
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
@@ -189,12 +314,12 @@ header {
 		-webkit-transform: translate3d(0, 40px, 0);
 		transform: translate3d(0, 40px, 0);
 	}
-    100% {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transform: none;
-        transform: none;
-      }
+	100% {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 @keyframes wheel-up-down {
