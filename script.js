@@ -8,12 +8,23 @@ sideNavLinks.forEach((link) => {
 	});
 });
 
-// const texts = document.querySelectorAll(".project-card .text");
-// const projects = document.querySelectorAll(".project-card");
+//hamburger menu
 
-// projects.forEach((project) => {
-// 	project.addEventListener("mouseover", function () {
-// 		texts.forEach((txt) => (txt.style.display = "none"));
-// 		this.style.display = "block";
-// 	});
-// });
+const nav = document.querySelector("header nav");
+const menu = document.querySelector("header svg.menu");
+const close = document.querySelector("header svg.close");
+const navLinks = document.querySelectorAll("header nav .nav-item .nav-link");
+
+menu.addEventListener("click", () => {
+	nav.classList.add("open-nav");
+});
+
+close.addEventListener("click", () => {
+	nav.classList.remove("open-nav");
+});
+
+navLinks.forEach((navLink) => {
+	navLink.addEventListener("click", () => {
+		nav.classList.remove("open-nav");
+	});
+});
